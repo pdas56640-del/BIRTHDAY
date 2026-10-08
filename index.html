@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#fff0f6">
+<title>Hey Sunny... 🌝</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Patrick+Hand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="emojiLayer" aria-hidden="true"></div>
+<button id="musicBtn" class="music-btn" type="button">🎵 Play Hangover</button>
+<audio id="music" loop preload="auto"><source src="assets/music/hangover.mp4" type="video/mp4"></audio>
+
+<main>
+<section class="page active" id="home">
+  <div class="doodle d1">♡</div><div class="doodle d2">✦</div><div class="doodle d3">🦋</div><div class="doodle d4">♡</div>
+  <div class="hero-card">
+    <div class="eyebrow">a tiny birthday surprise 👀</div>
+    <h1>Hey Sunny... 🌝</h1>
+    <p class="hero-big">Yes, you. Birthday Boy. 🎂</p>
+    <p>I made something for you... unfortunately. 😂</p>
+    <button class="primary-btn next" data-next="birthday">Open your surprise 🎁</button>
+    <div class="tiny">click the button... don't be shy 👀</div>
+  </div>
+</section>
+
+<section class="page" id="birthday">
+  <div class="content-card birthday-card birthday-layout">
+    <div class="birthday-photo-wrap">
+      <img class="birthday-photo" src="assets/photos/sunny-sunlight.jpeg" alt="Ayan sitting in sunlight, looking toward the camera">
+    </div>
+    <div class="birthday-copy">
+      <div class="eyebrow">birthday boy spotted 🎂</div>
+      <h2>Happy Birthday, Ayan! 🎂❤️</h2>
+      <p>Or should I say... <strong>Sunny? 😏</strong></p>
+      <p>Congratulations! You have successfully survived another year of being annoying, cute and way too confident. 😂❤️</p>
+      <p>I hope your day is as good-looking as you think you are. 😌</p>
+      <p>Don't let this website inflate your ego. 🙄</p>
+      <button class="primary-btn next" data-next="photos">Continue 👀</button>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="photos">
+  <div class="content-card photo-page">
+    <div class="eyebrow">photographic evidence 📸</div>
+    <h2>Okay Fine... You're Kinda Cute 👀</h2>
+    <p class="muted">I have proof. Unfortunately for my argument. 😒</p>
+    <div class="couple-feature">
+      <figure class="featured-couple"><img src="assets/photos/couple-selfie.jpeg" alt="Couple selfie"><figcaption>Okay... this one is kinda cute. 🤌❤️</figcaption></figure>
+    </div>
+    <div class="photo-grid">
+      <figure><img src="assets/photos/sunny-blue.jpeg" alt="Sunny in blue shirt"><figcaption>Birthday boy energy 🎂</figcaption></figure>
+      <figure><img src="assets/photos/couple-mirror.jpeg" alt="Mirror selfie together"><figcaption>Mirror selfie evidence 👀❤️</figcaption></figure>
+      <figure><img src="assets/photos/sunny-bw.jpeg" alt="Sunny black and white"><figcaption>Angry Bird, but make it flirty. 😏🐦‍⬛</figcaption></figure>
+    </div>
+    <button class="primary-btn next" data-next="likes">I have complaints 🙄</button>
+  </div>
+</section>
+
+<section class="page" id="likes">
+  <div class="content-card likes-card">
+    <div class="eyebrow">very serious complaints 🙄</div>
+    <h2>Things I DON'T Like About You</h2>
+    <p class="muted">Scratch each card to reveal the truth. Every reveal comes with a little emotional damage. 😂</p>
+    <div class="scratch-grid">
+      <div class="scratch-card"><div class="secret">Your eyes are way too distracting. Illegal. 👀❤️</div><canvas></canvas></div>
+      <div class="scratch-card"><div class="secret">You make me smile when I'm trying to act serious. 😒💗</div><canvas></canvas></div>
+      <div class="scratch-card"><div class="secret">You somehow steal my attention without trying. 🙄✨</div><canvas></canvas></div>
+      <div class="scratch-card"><div class="secret">You're annoyingly cute. It's getting suspicious. 😏</div><canvas></canvas></div>
+      <div class="scratch-card"><div class="secret">You make flirting way too easy. 😌💋</div><canvas></canvas></div>
+      <div class="scratch-card"><div class="secret">You're becoming my favourite bad habit. 🤌🥹</div><canvas></canvas></div>
+    </div>
+    <button class="primary-btn next" data-next="quiz">Okay, enough exposing myself 😭</button>
+  </div>
+</section>
+
+<section class="page" id="quiz">
+  <div class="content-card quiz-card">
+    <div class="eyebrow">important investigation 🧠❤️</div>
+    <h2>How Well Do You Know Me?</h2>
+    <p class="muted">Sunny, this is your exam. No cheating. 👀</p>
+    <div class="quiz-top"><span id="questionNumber">Question 1 / 13</span><span id="scoreText">Score: 0</span></div>
+    <div class="progress"><div id="progressBar"></div></div>
+    <div id="quizContent"></div>
+    <div id="quizMessage" class="quiz-message"></div>
+    <button id="quizNext" class="primary-btn hidden">Next question →</button>
+  </div>
+</section>
+
+<section class="page" id="serious">
+  <div class="content-card serious-card">
+    <div class="heart-big">❤️</div>
+    <h2>Okay, serious for 10 seconds. ❤️</h2>
+    <p>You earned a little message.</p>
+    <button class="primary-btn" id="openEnvelope">Open the envelope 💌</button>
+  </div>
+</section>
+
+<section class="page" id="letter">
+  <div class="content-card envelope-card">
+    <div id="envelope" class="envelope-wrap" role="button" tabindex="0" aria-label="Open envelope">
+      <div class="envelope">
+        <div class="flap"></div><div class="pocket"></div><div class="seal">💗</div>
+        <div id="letterPaper" class="letter-paper">
+          <h2>One Little Thing... 💌</h2>
+          <p>Okay, Sunny. For 10 seconds, no jokes. ❤️</p>
+          <p>I hope this year gives you happiness, good memories, exciting adventures and plenty of reasons to smile.</p>
+          <p>I really like the random conversations, the teasing, the flirting and those little moments that somehow become memories.</p>
+          <p>So yes... you're a little special. Don't let this information reach your ego. 👀</p>
+          <p class="signature">Happy Birthday, Sunny. 🎂❤️</p>
+          <button class="primary-btn next-letter" data-next="final">Okay, I've said enough 😭</button>
+        </div>
+      </div>
+      <p id="tapHint" class="tap-hint">Tap the envelope 💌</p>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="final">
+  <div class="content-card final-card">
+    <div class="final-doodles">♡ ✦ 🦋 ✧ ♡</div>
+    <h2>One Last Thing... 👀</h2>
+    <p class="ending-line">You've reached the suspiciously cute ending.</p>
+    <img class="final-photo" src="assets/photos/sunny-black-coat.jpeg" alt="Sunny in a black coat">
+    <div class="big-heart">♥</div>
+    <p>Happy Birthday, Sunny! 🎂❤️<br>Here's to more conversations, more teasing, more random memories and probably more flirting. 😏</p>
+    <p>Don't get too excited though... we're still just friend 🤌💗.</p>
+    <p class="hand">Or are we? 👀</p>
+    <button class="primary-btn" id="replayBtn">Replay the whole thing ↻</button>
+  </div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
